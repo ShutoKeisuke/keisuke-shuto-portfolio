@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+    overscroll-behavior: none;
+  }
+  
+  body {
+    @apply leading-relaxed;
+    background-color: #232946;
+    height: 100%;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+  }
+
+  #root {
+    height: 100%;
+    overscroll-behavior: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #fffffe;
+  }
+
+  p {
+    color: #b8c1ec;
+  }
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+/* Custom gradient utilities */
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* 3D transform utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
