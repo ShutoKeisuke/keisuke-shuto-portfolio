@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 export const BrandLogo = () => {
@@ -10,10 +9,9 @@ export const BrandLogo = () => {
       transition={{ duration: 0.2 }}
     >
       <div className="relative flex items-center">
-        {/* K with same font as S */}
         <div className="relative">
           <span className="text-4xl font-black tracking-tighter"
-            style={{ 
+            style={{
               fontFamily: 'system-ui',
               fontStretch: 'ultra-condensed',
               fontVariationSettings: '"wght" 900, "wdth" 75',
@@ -27,10 +25,9 @@ export const BrandLogo = () => {
           </span>
         </div>
 
-        {/* S without animation */}
         <div className="relative -ml-1">
           <span className="text-4xl font-black tracking-tighter"
-            style={{ 
+            style={{
               fontFamily: 'system-ui',
               fontStretch: 'ultra-condensed',
               fontVariationSettings: '"wght" 900, "wdth" 75',

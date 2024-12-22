@@ -37,15 +37,16 @@ export const ContactTextArea = ({
           required={required}
           rows={5}
           className={`w-full px-4 py-2.5 bg-[#121629] border rounded-lg
-                   text-[#fffffe] placeholder-[#b8c1ec]/50
-                   focus:outline-none focus:ring-1
-                   transition-all duration-200 resize-none
-                   ${error 
-                     ? 'border-[#eebbc3] ring-1 ring-[#eebbc3]/50' 
-                     : isValid
-                     ? 'border-[#97c1a9] ring-1 ring-[#97c1a9]/50'
-                     : 'border-[#b8c1ec]/20 focus:border-[#eebbc3] focus:ring-[#eebbc3]'
-                   }`}
+            text-[#fffffe] placeholder-[#b8c1ec]/50
+            focus:outline-none focus:ring-1
+            transition-all duration-200 resize-none
+            ${error
+              ? 'border-[#eebbc3] ring-1 ring-[#eebbc3]/50'
+              : isValid
+              ? 'border-[#97c1a9] ring-1 ring-[#97c1a9]/50'
+              : 'border-[#b8c1ec]/20 focus:border-[#eebbc3] focus:ring-[#eebbc3]'
+            }`
+          }
         />
         {isValid && (
           <div className="absolute right-3 top-3">

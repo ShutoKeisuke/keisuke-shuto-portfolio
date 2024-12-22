@@ -11,10 +11,10 @@ export const useNavigation = () => {
         window.getComputedStyle(element).paddingTop,
         10
       );
-      
+
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - HEADER_HEIGHT + (sectionPadding / 2);
-      
+
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'

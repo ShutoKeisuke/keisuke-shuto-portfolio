@@ -12,10 +12,8 @@ export const NavMenu: React.FC<NavMenuProps> = ({ onItemClick }) => {
   const { menuItems, scrollToSection } = useNavigation();
 
   const handleClick = (item: string) => {
-    // メニューを閉じる
     onItemClick();
-    
-    // 少し遅延を入れてスクロールを実行
+
     requestAnimationFrame(() => {
       scrollToSection(item);
     });
@@ -30,12 +28,8 @@ export const NavMenu: React.FC<NavMenuProps> = ({ onItemClick }) => {
       transition={{ type: "spring", damping: 20 }}
       style={{ paddingTop: HEADER_HEIGHT }}
     >
-      {/* Glass effect overlay */}
       <div className="absolute inset-0 bg-[#eebbc3]/5 backdrop-blur-[2px]" />
-      
-      {/* Content container */}
       <div className="relative h-full">
-        {/* Menu items */}
         <ul className="px-6 py-8 space-y-6">
           {menuItems.map((item, index) => (
             <motion.li
@@ -55,13 +49,12 @@ export const NavMenu: React.FC<NavMenuProps> = ({ onItemClick }) => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 + 0.3 }}
                 >
-                  <ChevronRight 
+                  <ChevronRight
                     className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
                   />
                 </motion.div>
               </button>
-              
-              {/* Animated underline */}
+
               <motion.div
                 className="h-px bg-gradient-to-r from-[#eebbc3]/20 via-[#b8c1ec]/20 to-transparent"
                 initial={{ scaleX: 0, originX: 0 }}
@@ -72,7 +65,6 @@ export const NavMenu: React.FC<NavMenuProps> = ({ onItemClick }) => {
           ))}
         </ul>
 
-        {/* Decorative elements */}
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1a1f35] to-transparent" />
         <div className="absolute bottom-8 left-6 right-6">
           <motion.div

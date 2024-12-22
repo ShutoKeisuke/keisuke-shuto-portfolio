@@ -1,14 +1,11 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SkillsGrid } from './SkillsGrid';
 
 const Skills = () => {
   return (
     <section id="skills" className="py-16 relative">
-      {/* Decorative background */}
       <div className="absolute inset-0 bg-[#121629]/30" />
-      
-      {/* Animated gradient orbs */}
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{

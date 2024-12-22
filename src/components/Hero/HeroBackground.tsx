@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useWindowSize } from '../../hooks/useWindowSize';
 
@@ -7,7 +6,6 @@ const HeroBackground = () => {
   const isMobile = width < 768;
   const isTablet = width >= 768 && width < 1024;
 
-  // モバイルとタブレット用の最適化された設定
   const sphereConfig = isMobile ? {
     count: 1,
     size: 200,
@@ -27,12 +25,8 @@ const HeroBackground = () => {
 
   return (
     <>
-      {/* Base gradient with reduced complexity */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#121629] to-[#232946] opacity-50" />
-      
-      {/* Optimized animated shapes container */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Reduced number of spheres for mobile/tablet */}
         {[...Array(sphereConfig.count)].map((_, i) => (
           <motion.div
             key={i}
@@ -58,7 +52,6 @@ const HeroBackground = () => {
           />
         ))}
 
-        {/* Reduced particles for mobile */}
         {[...Array(isMobile ? 4 : isTablet ? 6 : 8)].map((_, i) => (
           <motion.div
             key={`particle-${i}`}
@@ -83,11 +76,10 @@ const HeroBackground = () => {
         ))}
       </div>
 
-      {/* Simplified static gradient overlay */}
-      <div 
-        className="absolute inset-0" 
+      <div
+        className="absolute inset-0"
         style={{
-          background: isMobile 
+          background: isMobile
             ? 'radial-gradient(circle at 50% 30%, rgba(238, 187, 195, 0.08) 0%, transparent 60%)'
             : 'radial-gradient(circle at 50% 50%, rgba(238, 187, 195, 0.1) 0%, transparent 50%)',
         }}

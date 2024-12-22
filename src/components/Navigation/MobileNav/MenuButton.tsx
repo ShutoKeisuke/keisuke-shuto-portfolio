@@ -10,9 +10,9 @@ interface MenuButtonProps {
 
 export const MenuButton: React.FC<MenuButtonProps> = ({ isOpen, onClick }) => {
   return (
-    <div 
+    <div
       className="fixed right-6 z-[110]"
-      style={{ 
+      style={{
         top: `${HEADER_HEIGHT / 2}px`,
         transform: 'translateY(-50%)'
       }}

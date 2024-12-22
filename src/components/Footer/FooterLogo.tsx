@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 export const FooterLogo = () => {
@@ -17,17 +16,16 @@ export const FooterLogo = () => {
         transition={{ duration: 0.2 }}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
-        <span 
+        <span
           className="text-2xl font-bold bg-gradient-to-r from-[#eebbc3] to-[#b8c1ec] bg-clip-text text-transparent"
-          style={{ 
+          style={{
             fontFamily: "'Cinzel', serif",
             letterSpacing: '0.02em'
           }}
         >
           KS
         </span>
-        
-        {/* Animated underline */}
+
         <motion.div
           className="absolute -bottom-1 left-0 w-full h-px opacity-0 group-hover:opacity-100 transition-opacity"
           initial={{ scaleX: 0 }}

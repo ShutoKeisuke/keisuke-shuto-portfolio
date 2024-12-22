@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { Work } from './types';
@@ -28,7 +27,6 @@ export const WorkCard = ({ work }: WorkCardProps) => {
           alt={work.title}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
-        {/* オーバーレイとアイコン */}
         <div className="absolute inset-0 bg-[#121629]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="absolute top-3 right-3">
             <div className="rounded-full bg-[#eebbc3] p-2.5">

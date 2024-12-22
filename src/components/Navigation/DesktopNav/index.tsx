@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigation } from '../../../hooks/useNavigation';
 import { NavItem } from './NavItem';
 
@@ -9,7 +8,7 @@ export const DesktopNav = () => {
     <nav className="hidden lg:block">
       <ul className="flex space-x-12">
         {menuItems.map((item) => (
-          <NavItem 
+          <NavItem
             key={item}
             item={item}
             onClick={() => scrollToSection(item)}

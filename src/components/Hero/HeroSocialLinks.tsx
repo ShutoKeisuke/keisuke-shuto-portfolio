@@ -1,18 +1,16 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Instagram } from 'lucide-react';
 import { HeroSocialLink } from './HeroSocialLink';
 
-// Xアイコンのカスタムコンポーネント
 const XIcon = () => (
-  <svg 
-    viewBox="0 0 24 24" 
-    width="20" 
-    height="20" 
-    stroke="currentColor" 
-    fill="none" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
+  <svg
+    viewBox="0 0 24 24"
+    width="20"
+    height="20"
+    stroke="currentColor"
+    fill="none"
+    strokeWidth="2"
+    strokeLinecap="round"
     strokeLinejoin="round"
   >
     <path d="M4 4l11.733 16h4.267l-11.733 -16z" />

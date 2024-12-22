@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FooterNav } from './FooterNav';
 import { FooterSocial } from './FooterSocial';
@@ -6,7 +5,6 @@ import { FooterSocial } from './FooterSocial';
 const Footer = () => {
   return (
     <footer className="relative pt-16 pb-8 bg-[#121629]">
-      {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#eebbc3]/20 to-transparent" />
         <motion.div
@@ -40,11 +38,10 @@ const Footer = () => {
           <FooterNav />
         </div>
 
-        {/* Social Links & Copyright */}
         <div className="pt-8 border-t border-[#b8c1ec]/10">
           <div className="flex flex-col items-center md:flex-row md:justify-between gap-6">
             <FooterSocial />
-            <motion.p 
+            <motion.p
               className="text-[#b8c1ec]/60 text-sm text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

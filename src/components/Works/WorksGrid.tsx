@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { WorkCard } from './WorkCard';
 import { Work } from './types';
@@ -13,7 +12,7 @@ interface WorksGridProps {
 export const WorksGrid = ({ works, currentPage, itemsPerPage }: WorksGridProps) => {
   const { width } = useWindowSize();
   const isTablet = width >= 768 && width < 1024;
-  
+
   const startIndex = (currentPage - 1) * itemsPerPage;
   const selectedWorks = works.slice(startIndex, startIndex + itemsPerPage);
 
@@ -28,7 +27,7 @@ export const WorksGrid = ({ works, currentPage, itemsPerPage }: WorksGridProps) 
           exit="hidden"
           variants={{
             hidden: { opacity: 0 },
-            visible: { 
+            visible: {
               opacity: 1,
               transition: {
                 staggerChildren: 0.1
@@ -41,8 +40,8 @@ export const WorksGrid = ({ works, currentPage, itemsPerPage }: WorksGridProps) 
               key={work.id}
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                visible: { 
-                  opacity: 1, 
+                visible: {
+                  opacity: 1,
                   y: 0,
                   transition: {
                     duration: 0.4,

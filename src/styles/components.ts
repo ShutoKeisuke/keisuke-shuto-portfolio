@@ -1,9 +1,9 @@
 import { colors } from './colors';
 
 export const buttonStyles = {
-  base: `bg-[${colors.button}] text-[${colors.buttonText}] 
-         px-6 py-2 rounded-lg transition-transform hover:scale-105`,
-  outline: `border-2 border-[${colors.button}] text-[${colors.button}] 
+  base: `bg-[${colors.button}] text-[${colors.buttonText}]
+        px-6 py-2 rounded-lg transition-transform hover:scale-105`,
+  outline: `border-2 border-[${colors.button}] text-[${colors.button}]
             px-6 py-2 rounded-lg transition-transform hover:scale-105`,
 };
 

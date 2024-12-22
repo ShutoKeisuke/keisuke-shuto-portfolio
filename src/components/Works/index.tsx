@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { WorksGrid } from './WorksGrid';
 import { Pagination } from './Pagination';
@@ -15,16 +15,16 @@ const Works = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const worksRef = useRef<HTMLDivElement>(null);
   const { width } = useWindowSize();
-  
+
   const isMobile = width < 768;
   const isTablet = width >= 768 && width < 1024;
-  
-  const itemsPerPage = isMobile 
-    ? ITEMS_PER_PAGE.mobile 
-    : isTablet 
-    ? ITEMS_PER_PAGE.tablet 
+
+  const itemsPerPage = isMobile
+    ? ITEMS_PER_PAGE.mobile
+    : isTablet
+    ? ITEMS_PER_PAGE.tablet
     : ITEMS_PER_PAGE.desktop;
-    
+
   const totalPages = Math.ceil(works.length / itemsPerPage);
 
   const handlePageChange = (page: number) => {
@@ -35,12 +35,11 @@ const Works = () => {
   };
 
   return (
-    <section 
-      id="works" 
+    <section
+      id="works"
       ref={worksRef}
       className="relative py-16 bg-gradient-to-b from-[#121629] to-[#232946]"
     >
-      {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#232946] to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#232946] to-transparent" />

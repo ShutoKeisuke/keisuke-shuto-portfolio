@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Palette, Globe } from 'lucide-react';
 
@@ -25,7 +24,6 @@ export const AboutContent = () => {
     <div className="space-y-12">
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col sm:flex-row gap-6 sm:items-center">
-          {/* Avatar Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -39,18 +37,12 @@ export const AboutContent = () => {
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
-              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#232946]/50 via-transparent to-transparent" />
-              
-              {/* Decorative border */}
               <div className="absolute inset-0 border border-[#eebbc3]/20 rounded-2xl" />
             </div>
-            
-            {/* Background glow effect */}
             <div className="absolute -inset-4 bg-gradient-to-br from-[#eebbc3]/20 to-[#b8c1ec]/20 rounded-[28px] blur-2xl -z-10" />
           </motion.div>
 
-          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +59,6 @@ export const AboutContent = () => {
         </div>
       </div>
 
-      {/* Skills grid */}
       <div className="grid md:grid-cols-3 gap-8">
         {skills.map((skill, index) => (
           <motion.div
@@ -76,7 +67,7 @@ export const AboutContent = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               transition: { duration: 0.2 }
             }}

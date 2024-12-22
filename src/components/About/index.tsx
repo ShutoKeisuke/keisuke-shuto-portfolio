@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { AboutHeading } from './AboutHeading';
 import { AboutContent } from './AboutContent';
@@ -6,7 +5,6 @@ import { AboutContent } from './AboutContent';
 const About = () => {
   return (
     <section id="about" className="relative py-16 bg-gradient-to-b from-[#232946] to-[#121629]">
-      {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-transparent to-[#121629]/20" />
         <motion.div

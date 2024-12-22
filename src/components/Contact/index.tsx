@@ -1,11 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ContactForm } from './ContactForm';
 
 const Contact = () => {
   return (
     <section id="contact" className="relative py-16 bg-gradient-to-b from-[#232946] via-[#1e2339] to-[#1e2339]">
-      {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#232946] to-transparent" />
         <motion.div

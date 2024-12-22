@@ -8,7 +8,7 @@ interface NavItemProps {
 
 export const NavItem: React.FC<NavItemProps> = ({ item, onClick }) => {
   return (
-    <motion.li 
+    <motion.li
       whileHover={{ scale: 1.1 }}
       transition={{ duration: 0.2 }}
     >

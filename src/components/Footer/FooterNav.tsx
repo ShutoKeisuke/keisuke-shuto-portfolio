@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigation } from '../../hooks/useNavigation';
 
@@ -7,7 +6,6 @@ export const FooterNav = () => {
 
   return (
     <nav className="grid sm:grid-cols-2 gap-8">
-      {/* Quick Links */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +27,6 @@ export const FooterNav = () => {
         </ul>
       </motion.div>
 
-      {/* Contact Info */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

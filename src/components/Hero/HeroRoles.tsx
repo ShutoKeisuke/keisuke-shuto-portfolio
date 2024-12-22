@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Palette } from 'lucide-react';
 import { HeroRole } from './HeroRole';
@@ -11,11 +10,11 @@ export const HeroRoles = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
     >
-      <HeroRole 
+      <HeroRole
         icon={<Code className="w-5 h-5" />}
         text="Frontend Engineer"
       />
-      <HeroRole 
+      <HeroRole
         icon={<Palette className="w-5 h-5" />}
         text="Web Creator"
       />

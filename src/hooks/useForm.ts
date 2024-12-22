@@ -25,19 +25,19 @@ export const useForm = ({ initialValues, onSuccess }: UseFormProps) => {
       case 'name':
         if (!value.trim()) return '名前を入力してください';
         return '';
-      
+
       case 'email':
         if (!value.trim()) return 'メールアドレスを入力してください';
         if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
           return '有効なメールアドレスを入力してください';
         }
         return '';
-      
+
       case 'message':
         if (!value.trim()) return 'メッセージを入力してください';
         if (value.length < 10) return 'メッセージは10文字以上で入力してください';
         return '';
-      
+
       default:
         return '';
     }
@@ -48,7 +48,7 @@ export const useForm = ({ initialValues, onSuccess }: UseFormProps) => {
   ) => {
     const { name, value } = e.target;
     setValues(prev => ({ ...prev, [name]: value }));
-    
+
     const error = validateField(name, value);
     setFieldStates(prev => ({
       ...prev,
@@ -62,12 +62,12 @@ export const useForm = ({ initialValues, onSuccess }: UseFormProps) => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    
+
     const newFieldStates: Record<string, FieldState> = {};
     const hasErrors = Object.keys(values).some(key => {
       const error = validateField(key, values[key]);
-      newFieldStates[key] = { 
-        touched: true, 
+      newFieldStates[key] = {
+        touched: true,
         error,
         valid: error === '' && values[key].trim() !== ''
       };
@@ -90,9 +90,9 @@ export const useForm = ({ initialValues, onSuccess }: UseFormProps) => {
     }
   };
 
-  const isDisabled = isSubmitting || 
-    !values.name || 
-    !values.email || 
+  const isDisabled = isSubmitting ||
+    !values.name ||
+    !values.email ||
     !values.message ||
     Object.values(fieldStates).some(state => state.error !== '');
 

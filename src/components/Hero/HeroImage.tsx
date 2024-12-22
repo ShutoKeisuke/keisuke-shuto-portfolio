@@ -1,19 +1,17 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 export const HeroImage = () => {
   return (
-    <motion.div 
+    <motion.div
       className="hidden lg:block flex-1"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <div className="relative max-w-lg mx-auto perspective-1000">
-        {/* Main image with enhanced 3D card effect */}
         <motion.div
           className="relative preserve-3d"
-          animate={{ 
+          animate={{
             rotateY: [-2, 2],
             rotateX: [-1, 1]
           }}
@@ -23,12 +21,9 @@ export const HeroImage = () => {
             ease: "easeInOut"
           }}
         >
-          {/* Main card container */}
           <div className="relative rounded-xl overflow-hidden bg-[#121629]/20 backdrop-blur-sm">
-            {/* Layered card structure */}
             <div className="relative p-3">
               <div className="relative rounded-lg overflow-hidden">
-                {/* Main image */}
                 <motion.div
                   className="relative"
                   animate={{
@@ -45,13 +40,11 @@ export const HeroImage = () => {
                     alt="Developer workspace"
                     className="w-full transform-gpu rounded-lg"
                   />
-                  
-                  {/* Dynamic lighting overlays */}
+
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#121629]/40 via-transparent to-[#eebbc3]/5" />
                   <div className="absolute inset-0 bg-gradient-to-bl from-[#b8c1ec]/5 via-transparent to-transparent" />
                 </motion.div>
 
-                {/* Animated highlight effect */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-[#eebbc3]/10 to-transparent"
                   animate={{
@@ -67,21 +60,18 @@ export const HeroImage = () => {
               </div>
             </div>
 
-            {/* Decorative borders with gradient */}
             <div className="absolute inset-0 rounded-xl border border-[#eebbc3]/10 bg-gradient-to-b from-[#eebbc3]/5 to-transparent" />
             <div className="absolute inset-[2px] rounded-[10px] border border-[#b8c1ec]/5" />
           </div>
 
-          {/* Enhanced 3D shadow */}
           <div className="absolute -z-10 inset-0 translate-z-[-20px] rounded-xl bg-[#121629]/10 blur-xl" />
         </motion.div>
 
-        {/* Floating status card with enhanced 3D effect */}
         <motion.div
           className="absolute -bottom-6 -right-6"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ 
-            opacity: 1, 
+          animate={{
+            opacity: 1,
             y: 0,
           }}
           transition={{
@@ -102,20 +92,17 @@ export const HeroImage = () => {
               ease: "easeInOut"
             }}
           >
-            {/* Card content with enhanced glass effect */}
             <div className="relative p-6 rounded-lg overflow-hidden">
-              {/* Glass background */}
               <div className="absolute inset-0 bg-[#121629]/80 backdrop-blur-md" />
-              
-              {/* Content */}
+
               <div className="relative z-10">
-                <motion.p 
+                <motion.p
                   className="text-[#eebbc3] font-medium mb-1"
                   animate={{ z: 10 }}
                 >
                   Available for projects
                 </motion.p>
-                <motion.p 
+                <motion.p
                   className="text-[#b8c1ec] text-sm"
                   animate={{ z: 5 }}
                 >
@@ -123,7 +110,6 @@ export const HeroImage = () => {
                 </motion.p>
               </div>
 
-              {/* Enhanced decorative elements */}
               <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#eebbc3]/10 to-[#b8c1ec]/5" />
                 <div className="absolute inset-0 border border-[#eebbc3]/20" />
@@ -131,7 +117,6 @@ export const HeroImage = () => {
               </div>
             </div>
 
-            {/* Card shadow */}
             <div className="absolute -z-10 inset-0 translate-z-[-10px] rounded-lg bg-[#121629]/20 blur-md" />
           </motion.div>
         </motion.div>

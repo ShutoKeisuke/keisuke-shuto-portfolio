@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from '../../hooks/useForm';
 import { ContactInput } from './ContactInput';
@@ -8,15 +8,15 @@ import { Toast } from '../Toast';
 
 export const ContactForm = () => {
   const [showToast, setShowToast] = useState(false);
-  
-  const { 
-    values, 
-    errors, 
+
+  const {
+    values,
+    errors,
     validFields,
-    handleChange, 
-    handleSubmit, 
-    isSubmitting, 
-    isDisabled 
+    handleChange,
+    handleSubmit,
+    isSubmitting,
+    isDisabled
   } = useForm({
     initialValues: {
       name: '',
@@ -47,7 +47,7 @@ export const ContactForm = () => {
           onChange={handleChange}
           required
         />
-        
+
         <ContactInput
           label="Email"
           name="email"
@@ -58,7 +58,7 @@ export const ContactForm = () => {
           onChange={handleChange}
           required
         />
-        
+
         <ContactTextArea
           label="Message"
           name="message"
@@ -76,7 +76,7 @@ export const ContactForm = () => {
             group relative w-full py-4 rounded-lg font-medium
             flex items-center justify-center gap-2
             overflow-hidden
-            ${isDisabled 
+            ${isDisabled
               ? 'bg-[#121629] text-[#b8c1ec]/50 cursor-not-allowed'
               : 'bg-[#121629] text-[#fffffe]'
             }
@@ -84,16 +84,14 @@ export const ContactForm = () => {
             transition-all duration-300 ease-out
           `}
         >
-          {/* Border gradient */}
           <div className={`
             absolute inset-0 rounded-lg border
-            ${isDisabled 
+            ${isDisabled
               ? 'border-[#b8c1ec]/10'
               : 'border-[#97c1a9]/30'
             }
           `} />
 
-          {/* Success indicator for valid form */}
           {!isDisabled && (
             <>
               <div className="absolute inset-y-0 left-0 w-1 bg-[#97c1a9] rounded-l-lg opacity-75" />
@@ -102,7 +100,6 @@ export const ContactForm = () => {
             </>
           )}
 
-          {/* Content */}
           <span className="relative">
             {isSubmitting ? '送信中...' : 'メッセージを送信'}
           </span>

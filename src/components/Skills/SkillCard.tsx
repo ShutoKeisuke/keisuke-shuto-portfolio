@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
 
@@ -18,7 +17,7 @@ export const SkillCard = ({ icon: Icon, name, description, index }: SkillCardPro
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
       className="bg-[#121629] rounded-lg p-6 relative group transition-all duration-300
-                 hover:bg-[#121629]/80 hover:shadow-lg hover:shadow-[#eebbc3]/5"
+                hover:bg-[#121629]/80 hover:shadow-lg hover:shadow-[#eebbc3]/5"
     >
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-[#eebbc3]/5 to-[#b8c1ec]/5 rounded-lg opacity-0 group-hover:opacity-100"
@@ -33,13 +32,13 @@ export const SkillCard = ({ icon: Icon, name, description, index }: SkillCardPro
         >
           <Icon className="w-6 h-6 text-[#eebbc3]" />
         </motion.div>
-        
+
         <div className="flex-1">
           <h3 className="text-lg font-medium mb-2 text-[#fffffe] group-hover:text-[#eebbc3] transition-colors">
             {name}
           </h3>
           <p className="text-sm text-[#b8c1ec] mb-4">{description}</p>
-          
+
           <div className="relative h-1.5 bg-[#121629] rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}

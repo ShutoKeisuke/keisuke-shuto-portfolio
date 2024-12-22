@@ -1,4 +1,3 @@
-import React from 'react';
 import { HeroHeading } from './HeroHeading';
 import { HeroRoles } from './HeroRoles';
 import { HeroDescription } from './HeroDescription';

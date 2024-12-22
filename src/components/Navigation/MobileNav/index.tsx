@@ -10,7 +10,6 @@ interface MobileNavProps {
 }
 
 export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
-  // メニューの開閉状態に応じてbodyのスクロールを制御
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -20,7 +19,6 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
       document.body.style.touchAction = '';
     }
 
-    // クリーンアップ関数
     return () => {
       document.body.style.overflow = '';
       document.body.style.touchAction = '';
@@ -30,7 +28,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
   return (
     <div className="lg:hidden">
       <MenuButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-      
+
       <AnimatePresence>
         {isOpen && (
           <>
